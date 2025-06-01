@@ -23,12 +23,12 @@ if (SDL3_FOUND)
 	list(APPEND imgui_sources "${IMGUI_BACKENDS_DIR}/imgui_impl_sdl3.cpp")
 endif()
 
-if (IMGUI_OPENGL == 1 || IMGUI_OPENGL == 2)
-	list(APPEND imgui_sources "${IMGUI_BACKENDS_DIR}/imgui_impl_opengl2.cpp")
+if(IMGUI_OPENGL EQUAL 1 OR IMGUI_OPENGL EQUAL 2)
+    list(APPEND imgui_sources "${IMGUI_BACKENDS_DIR}/imgui_impl_opengl2.cpp")
 endif()
 
-if (IMGUI_OPENGL == 1 || IMGUI_OPENGL == 3)
-	list(APPEND imgui_sources "${IMGUI_BACKENDS_DIR}/imgui_impl_opengl3.cpp")
+if(IMGUI_OPENGL EQUAL 1 OR IMGUI_OPENGL EQUAL 3)
+    list(APPEND imgui_sources "${IMGUI_BACKENDS_DIR}/imgui_impl_opengl3.cpp")
 endif()
 
 add_library("imgui"
